@@ -7,76 +7,79 @@
       <br><br>
       <md-card-content>
         <div class="card-container">
-          <form md-form >
+          <form (ngSubmit)="onSubmit(f)" #f="ngForm">
             <div class="group">
               <md-input-container>
-                <input mdInput [(ngModel)]="personalDetail.nic" type="text" required>
+                <input mdInput [(ngModel)]="personalDetail.nic" type="text" name="nic" required>
               </md-input-container>
               <span class="highlight"></span>
               <span class="bar"></span>
               <label>NIC</label>
             </div>
             <div class="group">
-              <input type="text" required>
+              <input type="text" [(ngModel)]="personalDetail.fullName" name="fullName" required>
               <span class="highlight"></span>
               <span class="bar"></span>
               <label>Full Name</label>
             </div>
             <div class="group">
-              <input type="text" required>
+              <input type="text" required [(ngModel)]="personalDetail.shortName" name="shortName">
               <span class="highlight"></span>
               <span class="bar"></span>
               <label>Short Name</label>
             </div>
             <div class="group">
               <md-input-container class="example-full-width">
-                <input mdInput [mdDatepicker]="picker" placeholder="Choose a date">
+                <input mdInput [mdDatepicker]="picker" placeholder="Choose a date" [(ngModel)]="personalDetail.birthday" name="birthday">
                 <button mdSuffix [mdDatepickerToggle]="picker"></button>
               </md-input-container>
               <md-datepicker touchUi="true" #picker></md-datepicker>
             </div>
             <div class="group">
-              <input type="text" required>
+              <input type="text" required [(ngModel)]="personalDetail.address" name="address">
               <span class="highlight"></span>
               <span class="bar"></span>
               <label>Address</label>
             </div>
             <div class="group">
-              <input type="text" required>
+              <input type="text" required [(ngModel)]="personalDetail.mobileNomber" name="mobileNomber">
               <span class="highlight"></span>
               <span class="bar"></span>
               <label>Mobile Number</label>
             </div>
             <div class="group">
-              <input type="number" required>
+              <input type="number" required [(ngModel)]="personalDetail.height" name="height">
               <span class="highlight"></span>
               <span class="bar"></span>
               <label>Height</label>
             </div>
             <div class="group">
-              <input type="number" required>
+              <input type="number" required [(ngModel)]="personalDetail.weights" name="weights">
               <span class="highlight"></span>
               <span class="bar"></span>
               <label>Weight</label>
             </div>
             <div class="group">
-              <md-select placeholder="Gender">
-                <md-option>None</md-option>
-                <md-option>Male</md-option>
-                <md-option>Female</md-option>
+              <md-select placeholder="Gender" [(ngModel)]="personalDetail.gender" name="weight">
+                <md-option value="None">None</md-option>
+                <md-option value="Male">Male</md-option>
+                <md-option value="Female">Female</md-option>
 
               </md-select>
             </div>
-
+            <div class="card-container">
+              <button type="submit" md-button>LIKE</button>
+              <button md-button>SHARE</button>
+            </div>
           </form>
         </div>
       </md-card-content>
-      <md-card-actions>
+      <!-- <md-card-actions>
         <div class="card-container">
           <button md-button>LIKE</button>
           <button md-button>SHARE</button>
         </div>
-      </md-card-actions>
+      </md-card-actions> -->
     </md-card>
   </md-grid-tile>
   <md-grid-tile>

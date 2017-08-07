@@ -12,7 +12,7 @@ import { SideBarDirectiveDirective } from './Component/admin-panal/side-bar/side
 import { AdminPanalComponent } from './component/admin-panal/admin-panal.component';
 import { DefaultPageComponent } from './component/admin-panal/default-page/default-page.component';
 import { AddPersonComponent } from './component/admin-panal/registration/add-person/add-person.component';
-// import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -21,7 +21,7 @@ import { AddPersonComponent } from './component/admin-panal/registration/add-per
     SideBarDirectiveDirective,
     AdminPanalComponent,
     DefaultPageComponent,
-    AddPersonComponent,
+    AddPersonComponent
    
     
   ],
@@ -31,7 +31,8 @@ import { AddPersonComponent } from './component/admin-panal/registration/add-per
     MaterialModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    MdSidenavModule
+    MdSidenavModule,
+    FormsModule
 
 
   ],
